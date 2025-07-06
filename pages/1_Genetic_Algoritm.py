@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 # Configuración de la página
 st.set_page_config(layout="wide")
@@ -89,8 +90,8 @@ with col2:
 
         col1, col2, col3 = st.columns([0.5,2.5,0.5])
         with col2:
-            st.markdown("TABLA")
-            # st.image("pictures/INTRO/intro_track_record.png", width=800)
+            df1 = pd.read_pickle('data/genetico_05.pkl')
+            st.dataframe(df1)
 
 
 
@@ -143,8 +144,9 @@ with col2:
 
         col1, col2, col3 = st.columns([0.5,2.5,0.5])
         with col2:
-            st.markdown("TABLA")
-            # st.image("pictures/INTRO/intro_track_record.png", width=800)
+            df2 = pd.read_pickle('data/genetico_50.pkl')
+            st.dataframe(df2)
+
 
 
 
@@ -198,8 +200,8 @@ with col2:
 
         col1, col2, col3 = st.columns([0.5,2.5,0.5])
         with col2:
-            st.markdown("TABLA")
-            # st.image("pictures/INTRO/intro_track_record.png", width=800)
+            df3 = pd.read_pickle('data/genetico_95.pkl')
+            st.dataframe(df3)
 
 
 # Créditos

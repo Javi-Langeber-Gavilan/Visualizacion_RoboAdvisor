@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 # Configuración de la página
 st.set_page_config(layout="wide")
@@ -65,8 +66,8 @@ with col2:
 
     col1, col2, col3 = st.columns([0.5,2.5,0.5])
     with col2:
-        st.markdown("TABLA")
-        # st.image("pictures/INTRO/intro_track_record.png", width=800)
+            df1 = pd.read_pickle('data/best_funds.pkl')
+            st.dataframe(df1)
 
 
 # Créditos

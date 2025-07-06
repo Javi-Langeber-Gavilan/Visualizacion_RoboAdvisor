@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 # Configuración de la página
 st.set_page_config(layout="wide")
@@ -23,7 +24,7 @@ with col2:
                 
     <br>El backtesting de esta estrategia ha consistido en la generación de 1.000.000 de carteras aleatorias y su análisis durante el periodo
     comprendido entre el año 2005 y la actualidad. Debido al gran número de carteras generadas, se presenta a continuación el Track Record de los
-    deciles de todas ellas, y se muestra más adelante el análsis para los percentiles 10, 50 y 90  por separado.
+    deciles de todas ellas así como una tabla con información al respecto, y más adelante el análsis para los percentiles 10, 50 y 90  por separado.
                 
     <br>Los resultados obtenidos son los siguientes:
     </div>
@@ -34,6 +35,9 @@ with col2:
     col1, col2, col3 = st.columns([0.5,2.5,0.5])
     with col2:
         st.image("pictures/3_Random/tr.png", width=800)
+        df = pd.read_pickle('data/random_cuantiles.pkl')
+        df = df.loc[:, ['Rentabilidades', 'Capital Final']]
+        st.dataframe(df)
     
 
 
@@ -87,8 +91,8 @@ with col2:
 
         col1, col2, col3 = st.columns([0.5,2.5,0.5])
         with col2:
-            st.markdown("TABLA")
-            # st.image("pictures/INTRO/intro_track_record.png", width=800)
+            df1 = pd.read_pickle('data/mono_10.pkl')
+            st.dataframe(df1)
 
 
 
@@ -141,8 +145,8 @@ with col2:
 
         col1, col2, col3 = st.columns([0.5,2.5,0.5])
         with col2:
-            st.markdown("TABLA")
-            # st.image("pictures/INTRO/intro_track_record.png", width=800)
+            df2 = pd.read_pickle('data/mono_50.pkl')
+            st.dataframe(df2)
 
 
 
@@ -196,8 +200,8 @@ with col2:
 
         col1, col2, col3 = st.columns([0.5,2.5,0.5])
         with col2:
-            st.markdown("TABLA")
-            # st.image("pictures/INTRO/intro_track_record.png", width=800)
+            df3 = pd.read_pickle('data/mono_90.pkl')
+            st.dataframe(df3)
 
 
 # Créditos
