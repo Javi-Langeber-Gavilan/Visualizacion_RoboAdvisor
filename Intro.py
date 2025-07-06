@@ -16,7 +16,7 @@ with col2:
     st.markdown("<h3 style='text-align: center;'>Trabajo de Fin de Master</h3>", unsafe_allow_html=True)
 
     # Imagen opcional
-    col1, col2, col3 = st.columns([1,3,1])
+    col1, col2, col3 = st.columns([1,1,1])
     with col2:
         st.image("pictures/INTRO/logo-UPM.png", width=650, caption="UPM Logo")
 
