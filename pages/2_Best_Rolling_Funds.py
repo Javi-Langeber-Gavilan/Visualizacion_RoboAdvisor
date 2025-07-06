@@ -9,20 +9,18 @@ col1, col2, col3 = st.columns([1, 2, 1])  # Esto da un "ancho" ajustable al cont
 # Columna central (ajustamos su tamaño)
 with col2:
     # Título centrado
-    st.markdown("<h2 style='text-align: center;'>RESULTADOS - Equally Weighted Portfolio</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align: center;'>RESULTADOS - Best Rolling Funds Portfolio</h2>", unsafe_allow_html=True)
 
     # Texto justificado
     st.markdown("""
     <div style='text-align: justify; font-size: 16px;'>
-    <br>En este apartado se presentan los resultados del backtesting realizado para la estrategia del índice Equally Weighted realizada
-    para este estudio.
-
-    <br>Esta estrategia consiste en la generación en periodos rolados de 6 meses consistente en la utilización de todos los fondos disponibles
-    en el universo de inversión con pesos iguales. De este modo, se crea un índice sintético para el análisis del comportamiento del universo
-    de inversión en su totalidad, utilizando todos los fondos disponibles para cada periodo.
+    <br>En este apartado se presentan los resultados del backtesting realizado para la estrategia de los mejores fondos rolados.
                 
-    <br>El backtesting de esta estrategia ha consistido en la creación de este índice sintético y su análisis en el periodo comprendido entre
-    el año 2005 y la actualidad.
+    <br>Esta estrategia, enfocada en el momentum del mercado, consiste en la indexación de la cartera a los "n" mejores fondos
+    en cuanto a rentabilidad absoluta, de un periodo analizado anterior. En este caso, se analizan los periodos en ventanas roladas
+    de 6 messes y se crea la cartera con los 10 mejores fondos del periodo anterior. 
+                
+    <br>El backtesting de esta estrategia ha consistido en la simulación de esta cartera durante el periodo comprendido entre 2005 y la actualidad.
                 
     <br>Los resultados obtenidos son los siguientes:
     </div>
@@ -40,7 +38,7 @@ with col2:
 
     col1, col2, col3 = st.columns([0.5,2.5,0.5])
     with col2:
-        st.image("pictures/4_Benchmark/ew_roll.png", width=800)
+        st.image("pictures/2_Rolling/roll_roll.png", width=800)
 
     # DISTRIBUCION RENDIMIENTOS
     st.markdown("""
@@ -49,7 +47,7 @@ with col2:
 
     col1, col2, col3 = st.columns([0.5,2.5,0.5])
     with col2:
-        st.image("pictures/4_Benchmark/ew_dist.png", width=800)
+        st.image("pictures/2_Rolling/roll_dist.png", width=800)
 
     # TIME UNDER WATER
     st.markdown("""
@@ -58,7 +56,7 @@ with col2:
 
     col1, col2, col3 = st.columns([0.5,2.5,0.5])
     with col2:
-        st.image("pictures/4_Benchmark/ew_dd.png", width=800)
+        st.image("pictures/2_Rolling/roll_dd.png", width=800)
 
     # CUADRO RATIOS FINANCIEROS
     st.markdown("""
@@ -67,8 +65,8 @@ with col2:
 
     col1, col2, col3 = st.columns([0.5,2.5,0.5])
     with col2:
-        # st.image("pictures/INTRO/intro_track_record.png", width=800)
         st.markdown("TABLA")
+        # st.image("pictures/INTRO/intro_track_record.png", width=800)
 
 
 # Créditos

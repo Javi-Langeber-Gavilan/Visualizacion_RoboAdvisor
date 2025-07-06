@@ -10,7 +10,7 @@ st.set_page_config(
 col1, col2, col3 = st.columns([1, 2.5, 1])
 with col2:
     # Título principal
-    st.markdown("<h1 style='text-align: center;'>Desarrollo de un RoboAdvisor basado en Algoritmos Genéticos: Optimización de Carteras y Comparación con Estrategias Convencionales</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center;'>Desarrollo y Análisis de un RoboAdvisor basado en Algoritmos Genéticos</h1>", unsafe_allow_html=True)
     st.markdown("<h2 style='text-align: center;'>Máster Universitario en Ingeniería Industrial - Universidad Politécnica de Madrid</h2>", unsafe_allow_html=True)
     st.markdown("<h3 style='text-align: center;'>Trabajo de Fin de Master</h3>", unsafe_allow_html=True)
 
@@ -137,6 +137,6 @@ with col2:
         """)
 
 
-# Créditos o autor
+# Créditos
 st.markdown("---")
 st.caption("Autor: Javier Langeber Gavilán | Máster Universitario en Ingeniería Industrial | Universidad Politécnica de Madrid")
